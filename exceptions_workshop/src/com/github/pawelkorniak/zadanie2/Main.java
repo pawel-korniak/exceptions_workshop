@@ -26,7 +26,7 @@ class Main {
 
     static boolean isEven(double d) throws Exception {
         if (d < 0 || d != (int)d) {
-            throw new IllegalNumberException("number is negative or not natural");
+            throw new IllegalNumberException("Number is negative or not natural");
         }
         if (d % 2 != 0) return false;
         return true;

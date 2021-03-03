@@ -4,6 +4,6 @@ import java.io.IOException;
 
 public class DecimalPointException extends IOException {
     public DecimalPointException() {
-        super("number is not natural");
+        super("Number is not natural");
     }
 }
