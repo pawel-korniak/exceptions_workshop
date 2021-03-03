@@ -1,5 +1,6 @@
 package com.github.pawelkorniak.zadanie1;
 
+//TODO javadoc
 /**
  * zadanie pierwsze
  * wczytaj liczbę i sprawdź czy jest parzysta
@@ -8,6 +9,8 @@ package com.github.pawelkorniak.zadanie1;
 
 public class Main {
     public static void main(String[] args){
+
+
 
 
     }
