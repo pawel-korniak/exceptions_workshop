@@ -8,27 +8,23 @@ import java.util.Scanner;
  * <li>true jeśli liczba jest parzysta</li>
  * <li>false jeśli jest nieparzysta</li>
  * <li>rzuca wyjątek jeśli liczba jest ujemna lub zmiennoprzecinkowa</li>
+ * możesz modyfikować metodę main
  */
 class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean res = false;
         do {
-            try {
-                System.out.print("Podaj liczbę : ");
-                res = isEven(scanner.nextDouble());
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
+            System.out.print("Podaj liczbę : ");
+            res = isEven(scanner.nextDouble());
         } while (!res);
         System.out.println(res);
     }
 
-    static boolean isEven(double d) throws Exception {
-        if (d < 0 || d != (int)d) {
-            throw new IllegalNumberException("number is negative or not natural");
-        }
-        if (d % 2 != 0) return false;
-        return true;
+    static boolean isEven(double d){
+        /*
+        write your code here
+         */
+        return false;
     }
 }
