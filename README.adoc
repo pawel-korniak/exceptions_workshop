@@ -1,4 +1,4 @@
-==Witam na warsztatach z Wyjątków
+=Witam na warsztatach z Wyjątków
 _Autor_ Paweł Korniak
 na zajęciach zajmiemy się :
 [square]
