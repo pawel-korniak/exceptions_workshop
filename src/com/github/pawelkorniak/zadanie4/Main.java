@@ -20,9 +20,9 @@ public class Main {
     }
 
     static boolean isEven(double d){
-        /*
-        write your code here
-         */
+
+        //twoja implementacja
+
         return false;
     }
 }
