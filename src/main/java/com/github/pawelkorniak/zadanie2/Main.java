@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 /**
  * <strong>Zadanie drugie</strong>
- * napisz metode która przyjmuje double i zwraca :
+ * Napisz metode która przyjmuje double i zwraca :
  * <li>true jeśli liczba jest parzysta</li>
  * <li>false jeśli jest nieparzysta</li>
- * <li>rzuca wyjątek jeśli liczba jest ujemna lub zmiennoprzecinkowa</li>
+ * <li>rzuca wyjątek typu IllegalNumberException jeśli liczba jest ujemna lub zmiennoprzecinkowa</li>
+ *
+ * W razie wystąpienia wyjątku, program powiniem wyświetlić stosowną wiadomość i kontynuować działanie.
  */
-class Main {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean res = false;
@@ -17,16 +19,17 @@ class Main {
             try {
                 System.out.print("Podaj liczbę : ");
                 res = isEven(scanner.nextDouble());
+                if (!res) System.out.println("Liczba nieparzysta.");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         } while (!res);
-        System.out.println(res);
+        System.out.println("Liczba parzysta!");
     }
 
-    static boolean isEven(double d) throws Exception {
+    public static boolean isEven(double d) throws Exception {
         if (d < 0 || d != (int)d) {
-            throw new IllegalNumberException("Number is negative or not natural");
+            throw new IllegalNumberException();
         }
         if (d % 2 != 0) return false;
         return true;

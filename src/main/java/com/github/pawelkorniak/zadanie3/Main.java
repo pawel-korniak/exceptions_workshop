@@ -8,11 +8,11 @@ import java.util.Scanner;
  * napisz metode która przyjmuje double i zwraca :
  *  <ul>true jeśli liczba jest parzysta</ul>
  *  <ul>false jeśli jest nieparzysta</ul>
- *  <ul>rzuca wyjątek który może mieć dwie przyczyny :</ul>
- *  <li>liczba jest ujemna</li>
- *  <li>liczba jest zmiennoprzecinkowa</li>
+ *  <ul>rzuca wyjątek typu Exception który może mieć dwie przyczyny (Cause) :</ul>
+ *  <li>NegativeNumberException - jeśli liczba jest ujemna</li>
+ *  <li>DecimalPointException - jeśli liczba jest zmiennoprzecinkowa</li>
  *
- *
+ * W razie wystąpienia wyjątku, program powiniem wyświetlić jego przyczynę (Cause), oraz stosowną wiadomość i kontynuować działanie.
  */
 public class Main {
     public static void main(String[] args){
@@ -22,12 +22,13 @@ public class Main {
             try {
                 System.out.print("Podaj liczbę : ");
                 res = isEven(scanner.nextDouble());
+                if (!res) System.out.println("Liczba nieparzysta.");
             } catch (Exception e) {
                 Throwable cause = e.getCause();
                 System.out.println("Exception : cause : " + cause.getClass() + " ,message : " + cause.getMessage());
             }
         } while (!res);
-        System.out.println(res);
+        System.out.println("Liczba parzysta!");
     }
 
     static boolean isEven(double d) throws Exception {

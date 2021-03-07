@@ -1,9 +1,9 @@
-package com.github.pawelkorniak.zadanie3;
+package com.github.pawelkorniak.zadanie4;
 
 import java.io.IOException;
 
 public class DecimalPointException extends IOException {
     public DecimalPointException() {
-        super("Number is not natural");
+        super("Liczba nie jest liczbą naturalną.");
     }
 }
